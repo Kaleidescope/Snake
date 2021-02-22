@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>贪吃蛇</title>
+<link type="text/css" rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<div id="container">
+	<div class="left">
+		<table id="snakeTable" style="background-image: url('images/姐妹.jpg'); background-size: 400px 500px; "></table>
+	</div>
+	<div class="medium">
+		<div id="scoreDiv">分数：<span id="score">0</span>分</div>
+		<table class="operator">
+			<tr>
+				<td></td>
+				<td>道具：</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><button>道具1</button></td>
+				<td></td>
+				<td><button>道具2</button></td>
+			</tr>
+			<tr>
+				<td><button>道具3</button></td>
+				<td></td>
+				<td><button>道具4</button></td>
+			</tr>
+		</table> 
+		<table class="operator">
+			<tr>
+				<td></td>
+				<td><button onclick="changeDirection(2)">上</button><br></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><button onclick="changeDirection(1)">左</button><br></td>
+				<td></td>
+				<td><button onclick="changeDirection(-1)">右</button><br></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button onclick="changeDirection(-2)">下</button><br></td>
+				<td></td>
+			</tr>
+				
+			
+		</table>
+
+		
+	</div>
+	<div class="right">
+		
+			<table class="operator"> 
+				<tr>
+					<td>行：</td>
+					<td><input id="row" value=""></td>
+				</tr>
+				<tr>
+					<td>列：</td> 
+					<td><input id="col" value=""></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<button onclick="initRC(this)">开始游戏</button>
+					</td>
+				</tr>
+			</table>
+		
+			<table class="operator">
+				<tr>
+					<td colspan="2">背景</td>
+				</tr>
+				<tr>
+					<td><button onclick="changeBack(0)">刚子</button></td>
+					<td><button onclick="changeBack(1)">帅哥</button></td>
+				</tr>
+			</table>
+	
+	</div>
+
+</body>
+<script type="text/javascript" src="javascript/snake.js" charset="utf-8"></script>
+</html>
